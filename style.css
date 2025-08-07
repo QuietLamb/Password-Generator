@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.container {
+  margin: 10% 0 0 10%;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 8px;
+}
+.container:hover {
+  box-shadow: 0 0 30px green;
+}
+.container h1 {
+  font-size: 40px;
+}
+.container h1 span {
+  color: green;
+  text-decoration: underline;
+}
+.display {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: white;
+  width: 320px;
+  border-radius: 5px;
+}
+.display img {
+  width: 26px;
+  cursor: pointer;
+}
+.display input {
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+}
+.container button img {
+  width: 21px;
+}
+.container button {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: green;
+  color: white;
+  opacity: 90%;
+  font-weight: 500;
+  animation-name: background;
+  animation-duration: 1s; /* Required for animation to run */
+  animation-iteration-count: infinite; /* run forever */
+}
+
+@keyframes background {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: rgb(128, 128, 4);
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
