@@ -2,17 +2,18 @@ const passwordBox = document.getElementById("password");
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-const number = Math.floor(Math.random() * 10);
+const number = "0123456789";
 const symbol = "@#$%^&*()_+~|}{[]<>/-=";
 
 const length = 12;
-const allChar = upperCase + lowerCase + symbol;
+const allChar = upperCase + lowerCase + number + symbol;
 
 function createPassword() {
   let password = "";
+  //4 line bellow to ensure that all password at least has 4 different and allChar will fill the rest
   password += upperCase[Math.floor(Math.random() * upperCase.length)];
   password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-  password += number;
+  password += number[Math.floor(Math.random() * number.length)];
   password += symbol[Math.floor(Math.random() * symbol.length)];
 
   while (password.length != length) {
